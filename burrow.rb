@@ -5,21 +5,21 @@
 class Burrow < Formula
   desc "Dev tunnel CLI wrapping Cloudflare Tunnel with team-friendly persistent URLs"
   homepage "https://github.com/frank-chris/burrow"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/frank-chris/burrow/releases/download/v0.2.1/burrow_darwin_amd64.tar.gz"
-      sha256 "2e188665a9847d35346a2a95e89479298a28358c6de49acb2912d0b0c6e2f684"
+      url "https://github.com/frank-chris/burrow/releases/download/v0.2.2/burrow_darwin_amd64.tar.gz"
+      sha256 "ed1e0226b5a86c1433f1193579e3de39ea8b2fe77eabede717d302b03a7979e2"
 
       define_method(:install) do
         bin.install "burrow"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/frank-chris/burrow/releases/download/v0.2.1/burrow_darwin_arm64.tar.gz"
-      sha256 "ee7d5f5bfa8871901060631714a115dcc5f23ce93127ad168739891a9470ddcd"
+      url "https://github.com/frank-chris/burrow/releases/download/v0.2.2/burrow_darwin_arm64.tar.gz"
+      sha256 "ffc8b3148dd5fcbbff0d3a26ed319c58e2db18c47e1c4553804fd08399a3cbe3"
 
       define_method(:install) do
         bin.install "burrow"
@@ -29,15 +29,15 @@ class Burrow < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/frank-chris/burrow/releases/download/v0.2.1/burrow_linux_amd64.tar.gz"
-      sha256 "e8b1ee1e019aa1235c1036891233c0b1f77c0995be69afca18b6f79a9097035e"
+      url "https://github.com/frank-chris/burrow/releases/download/v0.2.2/burrow_linux_amd64.tar.gz"
+      sha256 "a071a80375455924f5afbfd2d8af6505bb2d289203263ebedaab3c50c55c93e3"
       define_method(:install) do
         bin.install "burrow"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/frank-chris/burrow/releases/download/v0.2.1/burrow_linux_arm64.tar.gz"
-      sha256 "f14ab242869084dcf75c2368d700f62b661b9d51f1710328e8600439d2472d49"
+      url "https://github.com/frank-chris/burrow/releases/download/v0.2.2/burrow_linux_arm64.tar.gz"
+      sha256 "4b0dab6c75b248e07a3e503342b863ee8ff4c4774cfaaf22c57a6763b062bfcb"
       define_method(:install) do
         bin.install "burrow"
       end
